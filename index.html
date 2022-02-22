@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/akar-icons-fonts"></script>
+    <title>CS:GO commands</title>
+    <link rel="stylesheet" href="css\style.css" />
+    <link rel="icon" href="./img/favicon.ico" />
+  </head>
+  <body>
+    <header>
+      <h1 onclick="linkGit()">CS:GO commands</h1>
+      <img onclick="linkTwitter()" src="./img/cmiicon.jpg" alt="">
+    </header>
+    <main>
+      <section id="Rifles">
+        <h2>Rifles</h2>
+        <div class="cards">
+          <div class="card" onclick="clipBoardM4A4()">
+            <img src="img\M4A4.png" alt="" />
+          </div>
+          <div class="card" onclick="clipBoardM4A1S()">
+            <img src="img/M4A1S.png" alt="" />
+          </div>
+          <div class="card" onclick="clipBoardAK47()">
+            <img src="img/AK47.png" alt="" />
+          </div>
+          <div class="card" onclick="clipBoardAWP()">
+            <img src="img/AWP.png" alt="" />
+          </div>
+        </div>
+      </section>
+      <section id="nades">
+        <h2>Nades</h2>
+        <div class="cards">
+          <div class="card" onclick="clipBoardHEgrenade()">
+            <img src="img/HEgrenade.jpg" alt="" />
+          </div>
+          <div class="card" onclick="clipBoardFlashbang()">
+            <img src="img/Flashbang.jpg" alt="" />
+          </div>
+          <div class="card" onclick="clipBoardmolotov()">
+            <img src="img/molotov.jpg" alt="" />
+          </div>
+          <div class="card" onclick="clipBoarddecoy()">
+            <img src="img/decoy.jpg" alt="" />
+          </div>
+          <div class="card" onclick="clipBoardsmokegrenade()">
+            <img src="img/smokegrenade.jpg" alt="" />
+          </div>
+          <div id="allNades" class="card" onclick="clipBoardAllNades()">
+            <p>ALL NADES</p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2>便利コマンド</h2>
+        <!-- noclip -->
+        <div class="command">
+          <div class="upper">
+            <span class="commandTitle">noclip</span>
+            <button onclick="clipBoardnoclip()">Copy</button>
+            <div class="bind">
+              <span>bind</span>
+              <input type="text" id="bindNoclip" maxlength="15" />
+              <span>"noclip"</span>
+              <button onclick="clipBoardBindNoclip()">Copy</button>
+            </div>
+          </div>
+          <p>空を飛べたり、壁を貫通できます。</p>
+        </div>
+        <!-- god -->
+        <div class="command">
+          <div class="upper">
+            <span class="commandTitle">god</span>
+            <button onclick="clipBoardgod()">Copy</button>
+            <div class="bind">
+              <span>bind</span>
+              <input type="text" id="bindGod" maxlength="15" />
+              <span>"god"</span>
+              <button onclick="clipBoardBindgod()">Copy</button>
+            </div>
+          </div>
+          <p>
+            無敵になります。※フレンドを攻撃し続けるとローカルサーバーからキックされるので注意！
+          </p>
+        </div>
+        <!-- rethrow -->
+        <div class="command">
+          <div class="upper">
+            <span class="commandTitle">sv_rethrow_last_grenade</span>
+            <button onclick="clipBoardRethrow()">Copy</button>
+            <div class="bind">
+              <span>bind</span>
+              <input type="text" id="bindrethrow" maxlength="15" />
+              <span>"rethrow"</span>
+              <button onclick="clipBoardBindrethrow()">Copy</button>
+            </div>
+          </div>
+          <p>直前に投げたグレネードを再投擲します。</p>
+        </div>
+        <!-- r_cleardecals -->
+        <div class="command">
+          <div class="upper">
+            <span class="commandTitle">r_cleardecals</span>
+            <button onclick="clipBoardcleardecals()">Copy</button>
+            <div class="bind">
+              <span>bind</span>
+              <input type="text" id="bindr_cleardecals" maxlength="15" />
+              <span>"r_cleardecals"</span>
+              <button onclick="clipBoardBindr_cleardecals()">Copy</button>
+            </div>
+          </div>
+          <p>すべての銃痕を消します。</p>
+        </div>
+        <!-- jumpthrow -->
+        <div class="command">
+          <div class="upper">
+            <span class="commandTitle">"+jump; -attack; -jump"</span>
+            <div class="bind">
+              <span>bind</span>
+              <input type="text" id="bindjumpthrow" maxlength="15" />
+              <span>"+jump; -attack; -jump"</span>
+              <button onclick="clipBoardBindjumpthrow()">Copy</button>
+            </div>
+          </div>
+          <p>ジャンプ投げバインド</p>
+        </div>
+        <!-- unbind -->
+        <div class="command">
+          <div class="upper">
+            <span class="commandTitle">unbind + KEY</span>
+            <div class="bind">
+              <span>unbind</span>
+              <input type="text" id="bindUnbind" maxlength="15" />
+              <span>←解除したいキー</span>
+              <button onclick="clipBoardUnbind()">Copy</button>
+            </div>
+          </div>
+          <p>設定されているバインドを解除します。</p>
+        </div>
+      </section>
+      <section>
+        <h2>各種ダウンロード</h2>
+        <div id="links">
+          <a id="dl" href="./autoexec.cfg" download="autoexec.cfg">
+            <div>
+              <i class="ai-file"></i>
+              <p>Autoexec.cfg</p>
+            </div>
+          </a>
+          <a id="dl" href="./practice.cfg" download="practice.cfg">
+            <div>
+              <i class="ai-file"></i>
+              <p>practice.cfg</p>
+            </div>
+          </a>
+        </div>
+      </section>
+      <textarea name="" id="testText" cols="30" rows="10"></textarea>
+    </main>
+    <footer>Create by chocomin</footer>
+    <script src="js/library/rellax.min.js"></script>
+    <script src="js/library/ztext.min.js"></script>
+    <script src="js/library/anime.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
